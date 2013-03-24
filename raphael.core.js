@@ -5,6 +5,9 @@
 // │ Copyright (c) 2008-2011 Sencha Labs (http://sencha.com)             │ \\
 // │ Licensed under the MIT (http://raphaeljs.com/license.html) license. │ \\
 // └─────────────────────────────────────────────────────────────────────┘ \\
+
+var eve = require('eve');
+
 (function () {
     /*\
      * Raphael
@@ -5244,4 +5247,9 @@
     eve.on("raphael.DOMload", function () {
         loaded = true;
     });
+
+    require('./raphael.svg');
+    require('./raphael.vml');
+
+    module.exports = Raphael;
 })();
